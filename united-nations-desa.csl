@@ -154,30 +154,6 @@
       </if>
     </choose>
   </macro>
-  <macro name="onuventa">
-    <choose>
-      <if variable="note">
-        <choose>
-          <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
-            <text variable="call-number" prefix="Sales No. "/>
-          </if>
-          <else>
-            <choose>
-              <if variable="call-number">
-                <text variable="call-number" prefix="Sales No. "/>
-              </if>
-              <else-if variable="number">
-                <text variable="number" prefix="Sales No. "/>
-              </else-if>
-              <else-if variable="volume">
-                <text variable="volume" prefix="Sales No. "/>
-              </else-if>
-            </choose>
-          </else>
-        </choose>
-      </if>
-    </choose>
-  </macro>
   <macro name="publisher">
     <group delimiter=": ">
       <text variable="event"/>
